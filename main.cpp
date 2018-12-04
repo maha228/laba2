@@ -1,4 +1,4 @@
-#include <string>
+п»ї#include <string>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -9,17 +9,17 @@ using namespace std;
 int main(){
 	setlocale(LC_ALL, "");
 	ifstream in("input.txt");
-	string input;//слово
-	stringstream ss;	//строковый поток
-	while(getline(in, input)){//считываем по предложению
+	string input;//СЃР»РѕРІРѕ
+	stringstream ss;	//СЃС‚СЂРѕРєРѕРІС‹Р№ РїРѕС‚РѕРє
+	while(getline(in, input)){//СЃС‡РёС‚С‹РІР°РµРј РїРѕ РїСЂРµРґР»РѕР¶РµРЅРёСЋ
 		 string temp = ss.str();
 		 ss.str(string());
-		 ss << input << '\n' << temp; //заносим в строковый поток
+		 ss << input << '\n' << temp; //Р·Р°РЅРѕСЃРёРј РІ СЃС‚СЂРѕРєРѕРІС‹Р№ РїРѕС‚РѕРє
 
 	}
 	while(getline(ss, input)){
-		cout << input << '\n';// выводим предложения
+		cout << input << '\n';// РІС‹РІРѕРґРёРј РїСЂРµРґР»РѕР¶РµРЅРёСЏ
 	}
-	in.close();//закрываем файл										   
+	in.close();//Р·Р°РєСЂС‹РІР°РµРј С„Р°Р№Р»										   
 	system("pause>>void");
 }
