@@ -11,7 +11,7 @@ int main(){
 	ifstream in("input.txt");
 	string input;//слово
 	stringstream ss;	//строковый поток
-	while(getline(in, input)){//считываем по предложению
+	while(getline(in, input,'.')){//считываем по предложению
 		 string temp = ss.str();
 		 ss.str(string());
 		 ss << input << '\n' << temp; //заносим в строковый поток
